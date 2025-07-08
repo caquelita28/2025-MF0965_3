@@ -13,7 +13,7 @@ class SakilaUI:
         self._load_customers()
 
     def _build_ui(self):
-        cols = ("country.Code", "country.Name", "country.Population", "city.Name", "city`.`POPULATION")
+        cols = ("country.Code", "country.Name", "country.Population", "city.Name", "city.POPULATION")
         self.tree = ttk.Treeview(self.root, columns=cols, show='headings')
         for col in cols:
             self.tree.heading(col, text=col)

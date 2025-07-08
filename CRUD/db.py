@@ -9,3 +9,4 @@ def get_connection():
         return conn
     except Error as e:
         raise ConnectionError(f"Error de conexión: {e}")
+
