@@ -3,11 +3,12 @@ from tkinter import ttk, messagebox
 from customer_service import CustomerService
 
 
-class SakilaUI:
+
+class wolrdUI:
     def __init__(self, root):
         self.root = root
-        self.database = SakilaUI
-        self.root.title("CRUD Clientes - Sakila")
+        self.database = wolrdUI
+        self.root.title("CRUD Clientes - world")
         self.service = CustomerService()
         self._build_ui()
         self._load_customers()
