@@ -6,13 +6,14 @@ from customer_service import CustomerService
 class SakilaUI:
     def __init__(self, root):
         self.root = root
+        self.database = SakilaUI
         self.root.title("CRUD Clientes - Sakila")
         self.service = CustomerService()
         self._build_ui()
         self._load_customers()
 
     def _build_ui(self):
-        cols = ('ID', 'Nombre', 'Apellidos', 'Dirección', 'Distrito', 'Ciudad', 'CP')
+        cols = ("country.Code", "country.Name", "country.Population", "city.Name", "city`.`POPULATION")
         self.tree = ttk.Treeview(self.root, columns=cols, show='headings')
         for col in cols:
             self.tree.heading(col, text=col)
@@ -51,3 +52,6 @@ class SakilaUI:
         if messagebox.askyesno("Eliminar", "¿Confirmar?"):
             self.service.remove_customer(cust_id)
             self._load_customers()
+
+
+
