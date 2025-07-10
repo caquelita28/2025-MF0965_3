@@ -3,7 +3,6 @@ from tkinter import ttk, messagebox
 from customer_service import CustomerService
 
 
-
 class wolrdUI:
     def __init__(self, root):
         self.root = root
